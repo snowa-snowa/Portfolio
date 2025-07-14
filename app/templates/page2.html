@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Проекты</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            black: '#000000',
+            white: '#ffffff',
+            gray: {
+              100: '#f7f7f7',
+              300: '#d1d1d1',
+              700: '#4a4a4a',
+              900: '#1a1a1a',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Poppins', 'sans-serif'],
+          },
+          boxShadow: {
+            'card': '0 4px 20px rgba(0,0,0,0.5)',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-black text-white font-sans min-h-screen flex flex-col">
+
+  <!-- Заголовок -->
+  <header class="bg-gray-900 py-8">
+    <div class="container mx-auto px-6 text-center">
+      <h1 class="text-4xl font-heading font-extrabold">Проекты</h1>
+    </div>
+  </header>
+
+  <!-- Сетка проектов -->
+  <main class="container mx-auto px-6 py-12 flex-grow">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 h-full">
+      <a href="https://github.com/snowa-snowa/Last_Study_Project" target="_blank" class="group h-full">
+        <div class="bg-gray-900 rounded-lg overflow-hidden shadow-card transform transition-transform duration-300 group-hover:scale-105 h-full flex flex-col">
+          <div class="p-6 flex-grow">
+            <h2 class="text-2xl font-heading font-semibold mb-4">It Up Academy</h2>
+            <p class="text-gray-300 leading-relaxed">
+              Рекламный проект учебного заведения с регистрацией студентов, REST API и документацией Swagger.
+            </p>
+          </div>
+        </div>
+      </a>
+
+      <a href="https://github.com/snowa-snowa/DJ_Bazar_Swagger_Api" target="_blank" class="group h-full">
+        <div class="bg-gray-900 rounded-lg overflow-hidden shadow-card transform transition-transform duration-300 group-hover:scale-105 h-full flex flex-col">
+          <div class="p-6 flex-grow">
+            <h2 class="text-2xl font-heading font-semibold mb-4">Market</h2>
+            <p class="text-gray-300 leading-relaxed">
+              Онлайн-площадка для продажи товаров с чатом и взаимодействием через REST API.
+            </p>
+          </div>
+        </div>
+      </a>
+
+      <a href="https://github.com/snowa-snowa/DJ_Blog05_Swagger_Api" target="_blank" class="group h-full">
+        <div class="bg-gray-900 rounded-lg overflow-hidden shadow-card transform transition-transform duration-300 group-hover:scale-105 h-full flex flex-col">
+          <div class="p-6 flex-grow">
+            <h2 class="text-2xl font-heading font-semibold mb-4">Blogs</h2>
+            <p class="text-gray-300 leading-relaxed">
+              Блог-проект с регистрацией, категориями, постами и комментариями.
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </main>
+
+  <!-- Плейсхолдер для новых проектов -->
+  <section class="container mx-auto px-6 py-4 text-center text-gray-600 italic">
+    Скоро здесь появятся новые проекты.
+  </section>
+
+  <!-- Кнопка назад -->
+  <footer class="bg-gray-900 py-8">
+    <div class="container mx-auto px-6 flex justify-center">
+      <a href="/"
+         class="w-full max-w-xs px-10 py-6 border-2 border-white bg-transparent text-white text-xl font-semibold rounded-lg shadow-lg transform transition duration-300 hover:scale-110 hover:bg-white hover:text-black text-center">
+        Назад в портфолио
+      </a>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Портфолио{% endblock %}</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            black: '#000000',
+            white: '#ffffff',
+            gray: {
+              100: '#f7f7f7',
+              300: '#d1d1d1',
+              700: '#4a4a4a',
+              900: '#1a1a1a',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Poppins', 'sans-serif'],
+          },
+          boxShadow: {
+            'lg-dark': '0 10px 25px rgba(0,0,0,0.6)',
+          },
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="bg-black text-white font-sans antialiased flex flex-col min-h-screen">
+
+
+  <header class="bg-gray-900 py-16">
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 items-center px-6 gap-4">
+
+      <div class="md:col-span-3 text-center md:text-left space-y-4">
+        <h1 class="text-4xl md:text-5xl font-heading font-extrabold">Привет, меня зовут Курбанбаев Акбар</h1>
+        <p class="text-lg md:text-xl text-gray-300">
+          Я — Python-разработчик, специализируюсь на Django и создании REST API. Имею опыт работы с PostgreSQL, Celery и Redis.
+          Учусь чуть больше года и постоянно расширяю знания. В будущем планирую углубиться в базы данных и работу с серверами.
+        </p>
+      </div>
+
+      <div class="md:col-span-1 flex justify-center md:justify-end">
+        <a href="/page2/"
+           class="w-full max-w-xs px-8 py-6 border-2 border-white bg-transparent text-white text-xl font-semibold rounded-lg shadow-lg transform transition duration-300 hover:scale-110 hover:bg-white hover:text-black text-center">
+          Мои проекты
+        </a>
+      </div>
+    </div>
+  </header>
+
+
+  <main class="container mx-auto px-6 py-16 flex-grow space-y-16">
+
+    <section class="text-center md:text-left border-b border-gray-700 pb-8">
+      <h2 class="text-3xl font-heading font-semibold mb-4">Технологии</h2>
+      <ul class="flex flex-wrap gap-4 text-gray-300">
+        <li class="px-4 py-2 border border-gray-700 rounded-lg">Python</li>
+        <li class="px-4 py-2 border border-gray-700 rounded-lg">Django</li>
+        <li class="px-4 py-2 border border-gray-700 rounded-lg">REST API</li>
+        <li class="px-4 py-2 border border-gray-700 rounded-lg">PostgreSQL</li>
+        <li class="px-4 py-2 border border-gray-700 rounded-lg">Celery</li>
+        <li class="px-4 py-2 border border-gray-700 rounded-lg">Redis</li>
+        <li class="px-4 py-2 border border-gray-700 rounded-lg">Git/GitHub</li>
+        <li class="px-4 py-2 border border-gray-700 rounded-lg">DBeaver</li>
+        <li class="px-4 py-2 border border-gray-700 rounded-lg">HTML/CSS</li>
+        <li class="px-4 py-2 border border-gray-700 rounded-lg">Docker</li>
+      </ul>
+    </section>
+
+    <section class="text-center md:text-left border-b border-gray-700 pb-8">
+      <h2 class="text-3xl font-heading font-semibold mb-4">Планы на будущее</h2>
+      <p class="text-gray-300 leading-relaxed">
+        В ближайшее время хочу углубиться в изучение SQL и PostgreSQL, так же улучшить знания Python, начать работу с серверами используя Docker и Celery.
+      </p>
+    </section>
+
+    <section class="text-center md:text-left">
+      <h2 class="text-3xl font-heading font-semibold mb-4">Контакты</h2>
+      <ul class="space-y-2 text-gray-300">
+        <li>Телефон: +998 99 202 38 10</li>
+        <li>Email: <a href="mailto:snowa8snowa@gmail.com" class="hover:text-white underline">snowa8snowa@gmail.com</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Ссылки на соцсети (выше футера) -->
+  <section class="bg-gray-900 py-8">
+    <div class="container mx-auto flex justify-center gap-12 text-white text-5xl">
+      <a href="https://t.me/snowa8snowa" target="_blank" class="hover:text-gray-300 transform hover:scale-110 transition">
+        <i class="fab fa-telegram"></i>
+      </a>
+      <a href="https://github.com/snowa-snowa" target="_blank" class="hover:text-gray-300 transform hover:scale-110 transition">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="mailto:snowa8snowa@gmail.com" class="hover:text-gray-300 transform hover:scale-110 transition">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 py-6 mt-auto">
+    <div class="container mx-auto text-center text-gray-500 text-sm">
+      2025.07.14
+    </div>
+  </footer>
+
+</body>
+</html>
